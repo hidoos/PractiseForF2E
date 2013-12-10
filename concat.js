@@ -1,3 +1,6 @@
+/**
+ * js数组是从0开始算的
+ */
 var aplha = ['a','b','c'];
 var numberic = [1,2,3];
 var aplhaNumberic = aplha.concat(numberic);
