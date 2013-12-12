@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js 和jQuery 判断一个节点是否存在</title>
+    <!--<script src="http://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>-->
+</head>
+<body>
+    <!-- -->
+     <p>一个段落</p>
+     <div id="id">一个带有id的元素</div>
+     <div class="class">一个带有class的元素</div>
+     <script type="text/javascript" charset="utf-8">
+
+        window.onload = function(){
+            heading = document.createElement('h2');
+            heading_text = document.createTextNode('big head');
+            heading.appendChild(heading_text);
+            
+            document.body.appendChild(heading);
+        } 
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLtable interface and DOM element interface</title>
+</head>
+<body>
+    <table id='table' border="0">
+         <thead>
+             <tr><td>测试一下</td><td>测试一下</td></tr>
+         </thead>
+         <tbody>
+                  <tr><td>测试一下</td><td>测试一下</td></tr>
+                  <tr><td>测试一下</td><td>测试一下</td></tr>
+                  <tr><td>测试一下</td><td>测试一下</td></tr>
+         </tbody>
+    </table>
+     <script type="text/javascript" charset="utf-8">
+        var table = document.getElementById('table');
+        var tableAttrs = table.attributes; //node /element interface
+
+        // HTMLTableElement interface : border attribute
+        for (var i = 0, l = tableAttrs.length; i < l; i ++) {
+            if(tableAttrs[i].nodeName.toLowerCase() == 'border'){
+                table.border = 1;
+            }
+        }
+        
+        table.summary = "node : increased border ";
+
+        document.body.appendChild(table);
+
+     </script>
+</body>
+</html>
