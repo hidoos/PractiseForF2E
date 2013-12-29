@@ -4,19 +4,20 @@
 
 
 /**
- * @param {object} 
+ * @param {object}
  * @return {object}
  */
-function createXhr(obj){
-    var obj = null;
-        
-    console.log('window.xfjaksdfjlasdx',window.xxsdfasd);
+function createXhr(obj) {
+  var obj = null;
 
-    if(window.XMLHttpRequest){
-        obj = new XMLHttpRequest();
-    }
 
-    return obj;
+  if (window.XMLHttpRequest) {
+    obj = new XMLHttpRequest();
+  } else {
+    try {} catch () {}
+  }
+
+  return obj;
 
 }
 var xhr = createXhr();
