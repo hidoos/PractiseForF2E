@@ -23,3 +23,45 @@ a {
   color: lightblue; }
   a:hover {
     color: drakten(lightblue, 10%); }
+
+/**
+ * icon样式 
+ * 演示 @each用法
+ */
+.share-sina {
+  background-image: url("../images/icon-sina.png"); }
+
+.share-weibo {
+  background-image: url("../images/icon-weibo.png"); }
+
+.share-taobao {
+  background-image: url("../images/icon-taobao.png"); }
+
+.share-baidu {
+  background-image: url("../images/icon-baidu.png"); }
+
+/*
+ * 布局 
+ * 演示 @while用法
+ */
+.column-1-of-4 {
+  width: 25%; }
+
+.column-3-of-4 {
+  width: 75%; }
+
+/* 
+ * 布局
+ * 演示 @for 用法 
+ */
+.grid-1-4 {
+  width: 25%; }
+
+.grid-2-4 {
+  width: 50%; }
+
+.grid-3-4 {
+  width: 75%; }
+
+.grid-4-4 {
+  width: 100%; }

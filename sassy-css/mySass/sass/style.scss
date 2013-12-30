@@ -32,3 +32,38 @@ body {
         color:drakten($linkColor, 10%);
     }
 }
+
+/**
+ * icon样式 
+ * 演示 @each用法
+ */
+$social-icon : sina,weibo,taobao,baidu;
+@each $social in $social-icon {
+    .share-#{$social}{
+        background-image:url('../images/icon-#{$social}.png');
+    }
+}
+
+/*
+ * 布局 
+ * 演示 @while用法
+ */
+$i : 1;
+@while $i <= 4 {
+    .column-#{$i}-of-4{
+        width:$i * 25%;
+    }
+
+    $i : $i + 2;
+
+}
+
+/* 
+ * 布局
+ * 演示 @for 用法 
+ */
+@for $j from 1 through 4{
+    .grid-#{$j}-4{
+        width:$j * 25%;
+    }
+}
