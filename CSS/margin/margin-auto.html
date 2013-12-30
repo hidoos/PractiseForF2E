@@ -2,9 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>margin关键字auto</title>
+    <title>margin关键字 | auto</title>
+    <style>
+        body,div,p{
+            margin:0;
+            padding:0;
+        }
+        .demo{
+            margin:0 auto;
+            padding:10px;
+            width:400px;
+            text-align:center;
+            background:#c3c3c3;
+
+            /* 可以让子元素继承的值 */
+            color:#cdefec;
+        }
+
+        .info { 
+            margin:auto;
+            border:1px solid green;
+            border-radius:2px;
+            margin-top:20px;
+            width:500px;
+            min-height:200px;
+            background:#fff;
+        }
+        .info .hd{
+            color:#fff;
+            font-size:14px;
+            line-height:24px;
+            height:24px;
+            text-align:center;
+            background:lightgreen;
+            border-bottom:1px solid green;
+        }
+        .info .bd{
+        }
+
+    </style>
 </head>
 <body>
-    <p>关于margin的规范</p>    
-</body>
+    <div class="demo">
+        <p>我就是那个居中的<em>设置</em>块级元素</p>
+    </div>
+
+    <div class="info">
+        <div class="hd">info信息</div>
+        <div class="bd">
+        </div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+    window.onload = function() {
+        var container = document.getElementById("container");
+        var sub = document.getElementById("sub");
+        var info = document.getElementById("info");
+        info.innerHTML = "container width :　" + container.style.width
+                +"<br/>container color : " + container.style.color
+                +"<br/>sub color : " + sub.style.color;
+    }
+</script>
+        
+    </script>
 </html>
