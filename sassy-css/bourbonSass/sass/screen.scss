@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "bourbon/_bourbon.scss";
+$main-color: #ce4dd6;
+$style: solid;
+
+.navbar {
+    /* sass 属性的嵌套 */
+    border-bottom: {
+        color: $main-color;
+        style: $style;
+    }
+}
+
+a {
+    color: $main-color;
+    &:hover {
+        border-bottom: 1px $style;
+    }
+}

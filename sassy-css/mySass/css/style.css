@@ -1,0 +1,25 @@
+@charset "GBK";
+/* 链接颜色  */
+body {
+  font-size: 12px; }
+
+/* 布局 */
+/* 
+ * 组件panel
+ */
+.panel {
+  background: #fff;
+  border: 1px solid #fcfcfc; }
+  .panel .panel-heading {
+    border-bottom: 1px solid #fcfcfc;
+    background: lightgreen; }
+  .panel .panel-body {
+    min-height: 200px; }
+
+/* 
+ * 设置链接全局样式
+ */
+a {
+  color: lightblue; }
+  a:hover {
+    color: drakten(lightblue, 10%); }

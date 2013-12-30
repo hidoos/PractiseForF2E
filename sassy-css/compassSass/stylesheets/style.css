@@ -1,7 +1,4 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,3 +45,35 @@ a img {
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
+
+/* 链接颜色  */
+body {
+  font-size: 12px; }
+
+/* 布局 */
+/* 
+ * 组件panel
+ */
+.panel {
+  background: #fff;
+  border: 1px solid #fcfcfc; }
+  .panel .panel-heading {
+    border-bottom: 1px solid #fcfcfc;
+    background: lightgreen; }
+  .panel .panel-body {
+    min-height: 200px; }
+
+/* 
+ * 设置链接全局样式
+ */
+a {
+  color: lightblue; }
+  a:hover {
+    color: drakten(lightblue, 10%); }
+  a.selected {
+    color: red; }
+
+/* 测试一下图片路径的处理 */
+.hd {
+  background: url(../images/top.png);
+  height: 20px; }
