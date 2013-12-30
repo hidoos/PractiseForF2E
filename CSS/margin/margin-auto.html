@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>margin关键字 | auto</title>
     <style>
-        body,div,p{
+        body, div, p {
             margin:0;
             padding:0;
         }
-        .demo{
+        #demo {
+            width:100%;
+            font-size:12px;
+        }
+        .demo {
             margin:0 auto;
             padding:10px;
             width:400px;
             text-align:center;
             background:#c3c3c3;
-
             /* 可以让子元素继承的值 */
             color:#cdefec;
         }
-
-        .info { 
+        #info {
             margin:auto;
             border:1px solid green;
             border-radius:2px;
@@ -28,7 +31,7 @@
             min-height:200px;
             background:#fff;
         }
-        .info .hd{
+        #info .hd {
             color:#fff;
             font-size:14px;
             line-height:24px;
@@ -37,32 +40,33 @@
             background:lightgreen;
             border-bottom:1px solid green;
         }
-        .info .bd{
+        #info .bd {
         }
-
     </style>
 </head>
+
 <body>
-    <div class="demo">
+    <div class="demo" style="font-size:20px;color:red;">
         <p>我就是那个居中的<em>设置</em>块级元素</p>
     </div>
 
-    <div class="info">
+    <div id="info">
         <div class="hd">info信息</div>
         <div class="bd">
         </div>
     </div>
 
     <script type="text/javascript" charset="utf-8">
-    window.onload = function() {
-        var container = document.getElementById("container");
-        var sub = document.getElementById("sub");
-        var info = document.getElementById("info");
-        info.innerHTML = "container width :　" + container.style.width
-                +"<br/>container color : " + container.style.color
-                +"<br/>sub color : " + sub.style.color;
-    }
-</script>
-        
+        /*通过 style这种方式只可以获取 写在html属性中的css  */
+        window.onload = function() {
+            var demo = document.getElementsByClassName("demo")[0];
+            var info = document.getElementById("info");
+            info.innerHTML = "demo width :　" + demo.style.fontSize +
+                "<br/>demo color : " + demo.style.color;
+        }
+
     </script>
+
 </html>
+
+
