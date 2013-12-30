@@ -56,6 +56,7 @@
         </div>
     </div>
 
+    <script src="../getStyle.js"></script>
     <script type="text/javascript" charset="utf-8">
         /*通过 style这种方式只可以获取 写在html属性中的css  */
         window.onload = function() {
@@ -63,6 +64,9 @@
             var info = document.getElementById("info");
             info.innerHTML = "demo width :　" + demo.style.fontSize +
                 "<br/>demo color : " + demo.style.color;
+
+            var value = getStyle(demo,'font-size');
+            console.log('value:',value);
         }
 
     </script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin percentage | margin 百分比</title>
+    <style>
+        /* 文当流动风向按照width 来算 */
+        .outer {
+            background:#ccc;
+            width:1000px;	
+            height:500px;
+        }
+        .inner{
+            padding:20px;
+            width:100px;
+            background:#ffc;
+            margin:10% 3%; // => margin-top:100px margin-right:30px margin-bottom:100px margin-left:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>css21 spec | 第六章 </title>
+    <title>css21 spec | 第六章</title>
 </head>
+
 <body>
     <h2>css2.1 规范 <a href="http://www.w3.org/TR/CSS2/cascade.html">Assigning property values, Cascading, and Inheritance</a>
     <p>Specified, computed, and actual values</p>    
@@ -13,5 +15,22 @@
         <li>Used values</li>
         <li>actual values</li>
     </ul>
+    <script src="./getStyle.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    window.onload = function(){
+        var el = document.getElementsByTagName('h2')[0];
+        
+        var fontSize =  getStyle(el,'font-size');
+        console.log(fontSize);
+    }
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+

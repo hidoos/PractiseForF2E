@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin percentage | margin 百分比</title>
+    <style>
+        /* 和书写模式 write-mode有关 参照物是width，垂直方向高度的内容是不断增加的，所以不能当作参考 */
+        .outer {
+            background:#ccc;
+            width:1000px;	
+            height:500px;
+        }
+        .inner{
+            padding:20px;
+            width:100px;
+            background:#ffc;
+            margin:10% 3%; // => margin-top:100px margin-right:30px margin-bottom:100px margin-left:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+        </div>
+    </div>
+</body>
+</html>
