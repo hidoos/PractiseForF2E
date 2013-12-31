@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js词法作用域的一些代码</title>
+</head>
+
+<body>
+
+<script type="text/javascript" charset="utf-8">
+    var foo = 1;    
+
+    function static(){
+        console.log(foo);
+    }
+    
+    !function(){
+        var foo = 2;
+        static();
+    }()
+
+    var result = !function(){
+        return false;
+    }()
+</script>
+</body>
+
+</html>
