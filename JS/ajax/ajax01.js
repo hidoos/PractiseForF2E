@@ -13,9 +13,8 @@ function createXhr(obj) {
 
   if (window.XMLHttpRequest) {
     obj = new XMLHttpRequest();
-  } else {
-    try {} catch () {}
   }
+
 
   return obj;
 

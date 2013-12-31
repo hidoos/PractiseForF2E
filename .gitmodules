@@ -1,9 +1,0 @@
-[submodule "css-creating"]
-	path = css-creating
-	url = git@github.com:hidoos/css-creating.git
-[submodule "component"]
-	path = component
-	url = https://github.com/component/component.git
-[submodule "bootstrap-sass"]
-	path = bootstrap-sass
-	url = git@github.com:hidoos/bootstrap-sass.git
