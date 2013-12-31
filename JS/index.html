@@ -16,8 +16,10 @@
     }
     
     !function(){
+        console.log('foo before:',foo);
         var foo = 2;
         static();
+        console.log('liji:',foo);
     }()
 
     var result = !function(){
