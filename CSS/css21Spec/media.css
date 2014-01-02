@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2014-1-3, 0:04:41
+    Author     : hidoos
+*/
+
+
+/** 
+ * @media rules 的一些语法 多个media之间使用 comma分割
+ * 另外，media还能控制不同屏幕大小
+ */
+@media screen , print{
+    font-size:12px;
+}
