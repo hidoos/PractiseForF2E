@@ -357,7 +357,7 @@ Bundle 'plasticboy/vim-markdown'
 
 " tagbar
 Bundle 'majutsushi/tagbar'
-let g:tagbar_ctags_bin = 'd:\VIM\ctags58\ctags.exe'
+let g:tagbar_ctags_bin = '$VIM\ctags58\ctags.exe'
 nmap <F8> :TagbarToggle<CR>
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
