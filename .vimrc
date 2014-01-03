@@ -8,11 +8,11 @@
 
 set nocompatible               " be iMproved
 filetype off                   " required!
-
+set wrap
 set autowriteall
 
-" 去掉输入错误的提示声音  
-set noeb 
+" 去掉输入错误的提示声音
+set noeb
 set vb t_vb=
 
 " 设置代码折叠
@@ -59,6 +59,19 @@ set nowb
 set iskeyword+=_,$,@,%,#,-
 set ignorecase " 搜索时无视大小写
 
+" Remove trailing whitespace when writing a buffer, but not for diff files.
+" From: Vigil
+" @see http://blog.bs2.to/post/EdwardLee/17961
+function RemoveTrailingWhitespace()
+    if &ft != "diff"
+        let b:curcol = col(".")
+        let b:curline = line(".")
+        silent! %s/\s\+$//
+        silent! %s/\(\s*\n\)\+\%$//
+        call cursor(b:curline, b:curcol)
+    endif
+endfunction
+autocmd BufWritePre * call RemoveTrailingWhitespace()
 
 " =====================
 "    默认为 UTF-8 编码
@@ -117,9 +130,9 @@ endif
 
 " 打开gvim时默认窗口最大化
 au GUIEnter * simalt ~x
-source $VIMRUNTIME/delmenu.vim  
-source $VIMRUNTIME/menu.vim  
-language messages zh_CN.utf-8  
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+language messages zh_CN.utf-8
 
 " =================
 " 插件powerline
@@ -137,7 +150,7 @@ if has('syntax')
 
     if has('gui_running')
         set background=dark
-        colorscheme molokai 
+        colorscheme molokai
         let g:colors_name="molokai"
     endif
 endif
@@ -188,7 +201,12 @@ nmap <leader>s :w!<cr>
 nmap <leader>w :wq!<cr>
 nmap <leader>q :q!<cr>
 
-" 切换缓冲区文件 
+"设置gj移动10行
+nmap gj 10j <cr>
+nmap gk 10k <cr>
+
+
+" 切换缓冲区文件
 nmap bw <C-w>w <cr>
 nmap bn :bn<cr>
 nmap bp :bp<cr>
@@ -218,6 +236,14 @@ nmap bl <C-w>L
 nmap bj <C-w>J
 nmap bk <C-w>K
 
+" Normal Mode, Visual Mode, and Select Mode,
+" use <Tab> and <Shift-Tab> to indent
+" @see http://c9s.blogspot.com/2007/10/vim-tips.html
+nmap <tab> v>
+nmap <s-tab> v<
+vmap <tab> >gv
+vmap <s-tab> <gv
+
 "关闭自动检测编码用F6控制(fencview.vim)
 let g:fencview_autodetect=0
 map <F6> :FencView<cr>
@@ -239,16 +265,25 @@ endif
 " =====================
 " Bundle
 " =====================
-" 此处规定Vundle的路径  
+" 此处规定Vundle的路径
 set rtp+=$VIM/vimfiles/bundle/vundle/
 call vundle#rc('$VIM/vimfiles/bundle/')
-filetype plugin indent on  
+filetype plugin indent on
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'gmarik/vundle'
+
+" eidtor 2014-1-3
+Bundle 'junegunn/vim-easy-align'
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign with a Vim movement
+nmap <Leader>a <Plug>(EasyAlign)
+
+Bundle 'vimtips.zip'
 
 " 美化状态栏
 Bundle 'Lokaltog/vim-powerline'
@@ -295,16 +330,16 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-autocmd FileType scss noremap <buffer> <c-f> :call CSSBeautify()<cr> 
+autocmd FileType scss noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 "工具类插件
-Bundle 'FencView.vim'               
+Bundle 'FencView.vim'
 " 识别编码
-Bundle 'scrooloose/nerdtree'       
+Bundle 'scrooloose/nerdtree'
 " 目录树插件
-Bundle 'bufexplorer.zip'           
+Bundle 'bufexplorer.zip'
 " 缓冲区文件查看
-Bundle 'kien/ctrlp.vim'            
+Bundle 'kien/ctrlp.vim'
 " 快速搜索文件插件
 Bundle 'terryma/vim-multiple-cursors'
 " 多光标多行编辑
@@ -313,7 +348,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'editorconfig/editorconfig-vim'
 
 " 注释插件
-Bundle 'tpope/vim-commentary' 
+Bundle 'tpope/vim-commentary'
 autocmd FileType apache set commentstring=#\ %s
 
 " 识别markdown语法插件
@@ -326,4 +361,4 @@ let g:tagbar_ctags_bin = 'd:\VIM\ctags58\ctags.exe'
 nmap <F8> :TagbarToggle<CR>
 
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=mkd
-filetype plugin indent on     " required!   
+filetype plugin indent on     " required!
