@@ -33,3 +33,13 @@
         .demo-list a{
             color:#fff;
         }
+
+        .plot{
+            position: absolute;
+            top:0;
+            left:0;
+            width:20px;
+            height:20px;
+            border-radius:20px;
+            background:rgb(175,50,50);
+        }
