@@ -14,7 +14,7 @@
             padding:4px 10px;
             font-weight:normal;
         }
-        .demo,.demo-list,.source{
+        .demo,.demo-list,.source,.log{
             padding:20px;
             border:1px solid #ddd;
             background:#eee;
@@ -22,6 +22,9 @@
             height:100px;
             content:'demo';
             margin-top:20px;
+        }
+        .log{
+            height:0;
         }
         .demo-list,.source{
             background:black;
