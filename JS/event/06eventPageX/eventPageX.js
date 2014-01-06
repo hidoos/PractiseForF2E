@@ -5,10 +5,15 @@
  *        c. 滚动条滚动距离
  */
 
-function getMousePoint(argument) {
+var plot = document.querySelector('.plot');
+offset = plot.offsetWidth / 2;
 
-}
+document.addEventListener('click',function(ev){
+    plot.style.left = (ev.pageX - offset) + 'px';
+    plot.style.top= (ev.pageY - offset ) + 'px';
+},false);
+
 
 /**
- * @todo : js 操作一个小球动起来
+ * @todo : 让小球用动画的形式动起来
  */
