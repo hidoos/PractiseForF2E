@@ -1,0 +1,60 @@
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        body {
+            padding: 20px;
+        }
+        .heading {
+            border: 1px solid blue;
+            border-top: 2px solid blue;
+            background: lightblue;
+            padding: 4px 10px;
+            font-weight: normal;
+        }
+        .demo,
+        .demo-list,
+        .source,
+        .log {
+            padding: 20px;
+            border: 1px solid #ddd;
+            background: #eee;
+            border-radius: 1px;
+            height: 100px;
+            content: 'demo';
+            margin-top: 20px;
+        }
+        .log {
+            height: 0;
+        }
+        .demo-list,
+        .source {
+            background: black;
+            color: #fff;
+        }
+        .demo-list a {
+            color: #fff;
+        }
+        .plot {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background: rgb(175, 50, 50);
+        }
+        .smooth {
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
