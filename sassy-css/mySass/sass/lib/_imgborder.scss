@@ -1,0 +1,56 @@
+@charset 'utf-8';
+/**
+ * 学习变量
+ * @doc : http://www.w3cplus.com/preprocessor/sass-basic-variable.html
+ */
+
+// 变量
+//---------------------------------
+$imgStyleBorder:         1px solid #ccc !default;
+$imgStylePadding:        2px !default;
+$imgStyleRadius:         8px !default;
+
+// mixin
+//---------------------------------
+@mixin img-border($border:$imgStyleBorder,$padding:$imgStylePadding){
+    border: $border;
+    padding: $padding;
+}
+
+@mixin img-rounded($radius:$imgStyleRadius){
+    border-radius:$radius;
+}
+
+// mixin box-shadow shadow... 的使用方法
+@mixin box-shadow($shadow...){
+    -webkit-box-shadow:$shadow;
+    -moz-box-shadow:$shadow;
+    box-shadow:$shadow;
+}
+
+
+//样式
+//---------------------------------
+.img-border{
+    @include img-border;
+}
+
+.img-rounded{
+    @include img-rounded;
+}
+
+//box-shadow
+$shadow: inset 1px 2px 2px rgba(0,0,0,0.1);
+.box-shadow{
+    @include box-shadow($shadow);
+}
+
+
+// 简化浏览器前缀 and sass #{} 属性名称 和 选择器的的变量
+//------------------------------------------------------------------------------------------
+$btn:"btn-primary";
+$derection:"left";
+
+.#{$btn}{
+    border-#{$derection}:1px solid #ccc;
+}
