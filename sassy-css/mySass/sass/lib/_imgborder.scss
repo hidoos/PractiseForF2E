@@ -54,3 +54,9 @@ $derection:"left";
 .#{$btn}{
     border-#{$derection}:1px solid #ccc;
 }
+
+// 变量重复申明
+$border-derection:'top' 'right' 'bottom' 'left';
+.box{
+    border-#{nth($border-derection,1)}-style:solid;
+}
