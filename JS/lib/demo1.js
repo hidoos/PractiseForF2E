@@ -2,6 +2,8 @@
  * demo1 创建一个underscore的包装对象
  * source : http://underscorejs.org/docs/underscore.html#section-9
  */
+
+// http://underscorejs.org/docs/underscore.html#section-120
 var us = _.noConflict();
 console.log("demo2:_:",_);
 var jsDate = {
