@@ -4,4 +4,4 @@
 
 * [sass变量][sass varable]
 
-1. [sass varable]:http://www.w3cplus.com/preprocessor/sass-basic-variable.html
+[sass varable]:http://www.w3cplus.com/preprocessor/sass-basic-variable.html
