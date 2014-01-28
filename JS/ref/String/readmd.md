@@ -13,3 +13,7 @@
 在字符串字面量上使用方法，如下：
 
     'hello,world".specify();
+
+有一个字符串：abcd-ef-ghi，请用JavaScript将它处理成：ghi&ef&abcd，练习题目来自 [08年出的一些前端面试题][f2etest]
+
+[f2etest]: http://www.ituring.com.cn/article/39906#
