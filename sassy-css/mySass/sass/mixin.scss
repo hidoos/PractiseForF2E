@@ -1,0 +1,13 @@
+@charset 'utf-8';
+@import 'lib/mixin';
+
+
+#header {
+   width:1000px;
+   @include center-block;
+}
+
+#main {
+    width:960px;
+    @include center-block;
+}

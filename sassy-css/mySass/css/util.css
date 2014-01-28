@@ -1,0 +1,9 @@
+.box, #header, .main {
+  margin-left: auto;
+  margin-right: auto; }
+
+#header {
+  width: 100px; }
+
+.main {
+  width: 800px; }

@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 $fontSize: 12px;
 $borderColor: #fcfcfc;
 
@@ -9,7 +11,7 @@ body {
 /* 布局 */
  .wrapper {
 }
-/* 
+/*
  * 组件panel
  */
  .panel {
@@ -23,7 +25,7 @@ body {
         min-height: 200px;
     }
 }
-/* 
+/*
  * 设置链接全局样式
  */
  a {
@@ -34,7 +36,7 @@ body {
 }
 
 /**
- * icon样式 
+ * icon样式
  * 演示 @each用法
  */
 $social-icon : sina,weibo,taobao,baidu;
@@ -45,7 +47,7 @@ $social-icon : sina,weibo,taobao,baidu;
 }
 
 /*
- * 布局 
+ * 布局
  * 演示 @while用法
  */
 $i : 1;
@@ -58,9 +60,9 @@ $i : 1;
 
 }
 
-/* 
+/*
  * 布局
- * 演示 @for 用法 
+ * 演示 @for 用法
  */
 @for $j from 1 through 4{
     .grid-#{$j}-4{

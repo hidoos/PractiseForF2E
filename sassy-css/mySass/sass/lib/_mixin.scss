@@ -1,0 +1,13 @@
+// mixin
+//--------------------------------------------------------------------------------
+
+// 无参数的mixin
+@mixin center-block {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+// 样式
+.box{
+    @include center-block();
+}
