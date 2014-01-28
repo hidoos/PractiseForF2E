@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/**
+ * scss 生产三角形
+ * @author: hidoos
+ * @date: 2014/1/26
+ * @doc: css三角形状原理：http://codepen.io/chriscoyier/full/lotjh
+ */
+.arraw-top {
+  width: 0;
+  height: 0;
+  display: block;
+  border-bottom: 5px solid red;
+  border-left: 5px dashed transparent;
+  border-right: 5px dashed transparent; }
+
+.arraw-right {
+  width: 0;
+  height: 0;
+  display: block;
+  border-left: 10px dashed blue;
+  border-top: 10px dashed transparent;
+  border-bottom: 10px dashed transparent; }

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.box, #header {
+  margin-left: auto;
+  margin-right: auto; }
+
+.box {
+  width: 100px; }
+
+#header {
+  height: 200px; }
+
+/**
+ * 调用mixin混合 @if
+ */
+.demo {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }

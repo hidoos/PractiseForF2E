@@ -1,0 +1,44 @@
+/**
+ * scss 生产三角形
+ * @author: hidoos
+ * @date: 2014/1/26
+ * @doc: css三角形状原理：http://codepen.io/chriscoyier/full/lotjh
+ */
+ @mixin triangle($dereaction:top, $size:5px, $borderColor:red) {
+  width:0;
+  height:0;
+  display:block;
+
+  @if $dereaction==top {
+    // 测试了一下发现 border-right没写，默认的情况下 border-right-width:0 border-right-style:none border-right-color:fontColor;
+    border-bottom:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  }
+
+  @if $dereaction == right {
+    border-left:$size dashed $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+
+  @if $dereaction == bottom{
+    border-top:$size dashed $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  }
+
+  @if $dereaction == left {
+    border-top:$size dashed transparent;
+    border-left:$size dashed transparent;
+    border-right:$size dashed $borderColor;
+  }
+
+}
+
+.arraw-top {
+  @include triangle;
+}
+.arraw-right{
+  @include triangle(right,10px,blue);
+}
