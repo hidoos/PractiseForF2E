@@ -7,13 +7,20 @@
  */
 
 
+// solution 1
 function numbers() {
   if (arguments[0] == null) return false;
   var tmp = true;
 
-  for (var i = 0; i < arguments.length - 1; i++) {// arguments.length 为什么是 arguments.length -1 ?
+  for (var i = 0; i < arguments.length - 1; i++) { // arguments.length 为什么是 arguments.length -1 ?
     if (typeof arguments[i] != 'number')
       tmp = false
   }
   return tmp;
+}
+
+
+// solution 2
+function isNumbers() {
+    arguments.slice();
 }
